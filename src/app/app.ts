@@ -4,9 +4,6 @@ import { CheckBox } from '@syncfusion/ej2-buttons';
 
 let spreadsheet: Spreadsheet = new Spreadsheet({
     height: '550px',
-    sheets: [
-        {
-        }],
     beforeCellRender: (args) => {
         const column = currentData.columns?.[args.colIndex];
         if (
@@ -42,6 +39,7 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
 
 spreadsheet.appendTo('#spreadsheet');
 let currentData = data;
+let fieldsOrder = [];
 
 document.getElementById('changeDataDropdown').addEventListener('change', (e) => {
     const selectedValue = e.target.value;
@@ -50,18 +48,21 @@ document.getElementById('changeDataDropdown').addEventListener('change', (e) => 
     switch (selectedValue) {
         case 'questionSet1':
             currentData = questionSet1;
+            fieldsOrder = [];
             break;
         case 'questionSet2':
             currentData = questionSet2;
+            fieldsOrder = [];
             break;
         case 'questionSet3':
             currentData = questionSet3;
+            fieldsOrder = [];
             break;
         case 'default':
             currentData = data;
             break;
     }
-    spreadsheet.updateRange({ startCell: 'A1', fieldsOrder:[], dataSource: currentData.data }, 0);
+    spreadsheet.updateRange({ startCell: 'A1', dataSource: currentData.data }, 0);
     setTimeout(() => {
         spreadsheet.resize();
     });

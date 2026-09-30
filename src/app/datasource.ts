@@ -111,62 +111,72 @@ export let questionSet2 = {
         {
             'S.no': 1,
             'Question': 'What is the shortcut key to insert a new worksheet in Excel?\n(a) Ctrl + V\n(b) Shift + F11\n(c) Ctrl + N\n(d) Ctrl + X',
-            'Answer': 'B',
-            'Remark': 'TRUE'
+            'Answer': 'A',
+            'correctAnswer': 'B',
+            'Remark': ''
         },
         {
             'S.no': 2,
             'Question': 'What is the function to sum a range of cells in Excel?\n(a) ADD\n(b) SUMA\n(c) SUMS\n(d) SUM',
             'Answer': 'D',
-            'Remark': 'FALSE'
+            'correctAnswer': 'D',
+            'Remark': ''
         },
         {
             'S.no': 3,
             'Question': 'Which of the following is NOT a type of PivotTable?\n(a) Standard PivotTable\n(b) Pivot Chart\n(c) Timeline PivotTable\n(d) Slicer PivotTable',
-            'Answer': 'A',
-            'Remark': 'TRUE'
+            'Answer': 'C',
+            'correctAnswer': 'A',
+            'Remark': ''
         },
         {
             'S.no': 4,
             'Question': 'Which of the following is NOT a way to filter data in Excel?\n(a) AutoFilter\n(b) Advanced Filter\n(c) Slicer\n(d) Data Validation',
             'Answer': 'D',
-            'Remark': 'TRUE'
+            'correctAnswer': 'D',
+            'Remark': ''
         },
         {
             'S.no': 5,
             'Question': 'Which of the following is NOT a type of data connection in Excel?\n(a) OLE DB Connection\n(b) ODBC Connection\n(c) HTTPS Connection\n(d) Text File Connection',
-            'Answer': 'C',
-            'Remark': 'FALSE'
+            'Answer': 'B',
+            'correctAnswer': 'C',
+            'Remark': ''
         },
         {
             'S.no': 6,
             'Question': 'Which function returns the average of a range?\n(a) AVERAGE\n(b) SUM\n(c) MEDIAN\n(d) COUNT',
             'Answer': 'A',
-            'Remark': 'TRUE'
+            'correctAnswer': 'A',
+            'Remark': ''
         },
         {
             'S.no': 7,
             'Question': 'Which function returns the highest value in a range?\n(a) MIN\n(b) AVG\n(c) MAX\n(d) COUNT',
-            'Answer': 'C',
-            'Remark': 'TRUE'
+            'Answer': 'D',
+            'correctAnswer': 'C',
+            'Remark': ''
         },
         {
             'S.no': 8,
             'Question': 'Which function returns the lowest value in a range?\n(a) MAX\n(b) MIN\n(c) COUNT\n(d) SUM',
             'Answer': 'B',
-            'Remark': 'FALSE'
+            'correctAnswer': 'B',
+            'Remark': ''
         },
         {
             'S.no': 9,
             'Question': 'Which Excel feature is used to summarize and analyze large amounts of data?\n(a) Conditional Formatting\n(b) Data Validation\n(c) Flash Fill\n(d) PivotTable',
-            'Answer': 'D',
-            'Remark': 'TRUE'
+            'Answer': 'A',
+            'correctAnswer': 'D',
+            'Remark': ''
         },
         {
             'S.no': 10,
             'Question': 'Which chart type is best suited to show trends over time?\n(a) Line Chart\n(b) Pie Chart\n(c) Doughnut Chart\n(d) Radar Chart',
             'Answer': 'A',
-            'Remark': 'TRUE'
+            'correctAnswer': 'A',
+            'Remark': ''
         }
     ]
 };

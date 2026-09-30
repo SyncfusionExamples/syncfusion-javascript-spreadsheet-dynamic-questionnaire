@@ -39,7 +39,7 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
 
 spreadsheet.appendTo('#spreadsheet');
 let currentData = data;
-let fieldsOrder = [];
+let columnOrder: any;
 
 document.getElementById('changeDataDropdown').addEventListener('change', (e) => {
     const selectedValue = e.target.value;
@@ -48,21 +48,30 @@ document.getElementById('changeDataDropdown').addEventListener('change', (e) => 
     switch (selectedValue) {
         case 'questionSet1':
             currentData = questionSet1;
-            fieldsOrder = [];
+            columnOrder = ['Question', 'A', 'B', 'C', 'D', 'Checbox Count', 'Answer'];
             break;
         case 'questionSet2':
             currentData = questionSet2;
-            fieldsOrder = [];
+            columnOrder = ['S.no', 'Question', 'Answer', 'Remark'];
             break;
         case 'questionSet3':
             currentData = questionSet3;
-            fieldsOrder = [];
+            columnOrder = ['Data', 'Question', 'Functions to learn', 'Formula Used'];
             break;
         case 'default':
             currentData = data;
             break;
     }
-    spreadsheet.updateRange({ startCell: 'A1', dataSource: currentData.data }, 0);
+    spreadsheet.updateRange({ startCell: 'A1', fieldsOrder: columnOrder, dataSource: currentData.data }, 0);
+    if (currentData === questionSet2) {
+        currentData.data.forEach((item: any, index: number) => {
+            currentData.data.forEach((item: any, index: number) => {
+                setCell(index + 1, 3, spreadsheet.getActiveSheet(), {
+                    formula: `=IF(C${index + 2}="${item.correctAnswer}",TRUE,FALSE)`
+                });
+            });
+        });
+    }
     setTimeout(() => {
         spreadsheet.resize();
     });

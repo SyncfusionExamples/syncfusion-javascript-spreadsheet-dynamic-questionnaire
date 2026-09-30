@@ -14,7 +14,7 @@ const dropDownListObject: DropDownList = new DropDownList({
 // Render the dropdown component
 dropDownListObject.appendTo('#changeDataDropdown');
 
-let spreadsheet: Spreadsheet = new Spreadsheet({
+const spreadsheet: Spreadsheet = new Spreadsheet({
     beforeCellRender: (args) => {
         // Get column configuration for the current cell
         const column = currentData.columns?.[args.colIndex];

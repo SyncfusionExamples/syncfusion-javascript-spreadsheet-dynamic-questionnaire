@@ -1,6 +1,17 @@
 import { Spreadsheet, DataSourceChangedEventArgs, getCellAddress, setCell, setColumn } from '@syncfusion/ej2-spreadsheet';
 import { data, questionSet1, questionSet2, questionSet3 } from './datasource.ts';
 import { CheckBox } from '@syncfusion/ej2-buttons';
+import { DropDownList } from '@syncfusion/ej2-dropdowns';
+
+// initialize DropDownList component
+   const dropDownListObject: DropDownList = new DropDownList({
+        placeholder:"Select an Interview details",
+        change: questionSetChangeHandler,
+        width: "250px"
+    });
+
+// render initialized DropDownList
+dropDownListObject.appendTo('#changeDataDropdown');    
 
 let spreadsheet: Spreadsheet = new Spreadsheet({
     beforeCellRender: (args) => {
@@ -40,8 +51,8 @@ spreadsheet.appendTo('#spreadsheet');
 let currentData = data;
 let columnOrder: any;
 
-document.getElementById('changeDataDropdown').addEventListener('change', (e) => {
-    const selectedValue = e.target.value;
+function questionSetChangeHandler(args: any){
+    const selectedValue = args.value;
     spreadsheet.refresh(true);
 
     switch (selectedValue) {
@@ -74,5 +85,4 @@ document.getElementById('changeDataDropdown').addEventListener('change', (e) => 
     setTimeout(() => {
         spreadsheet.resize();
     });
-
-});
+};

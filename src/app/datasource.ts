@@ -1,46 +1,6 @@
 export let data: any = {
-    columns: [{ type: 'General' }, { type: 'General' }, { type: 'General' }, { type: 'General', width: 150 }, { type: 'General', width: 200 }, { type: 'General', width: 250 }],
-    data:
-        [{
-            OrderID: 10248,
-            CustomerID: 'VINET',
-            EmployeeID: 5,
-            ShipName: 'Vins et alcools Chevalier',
-            ShipCity: 'Reims',
-            ShipAddress: '59 rue de lAbbaye'
-        },
-        {
-            OrderID: 10249,
-            CustomerID: 'TOMSP',
-            EmployeeID: 6,
-            ShipName: 'Toms Spezialitäten',
-            ShipCity: 'Münster',
-            ShipAddress: 'Luisenstr. 48'
-        },
-        {
-            OrderID: 10250,
-            CustomerID: 'HANAR',
-            EmployeeID: 4,
-            ShipName: 'Hanari Carnes',
-            ShipCity: 'Rio de Janeiro',
-            ShipAddress: 'Rua do Paço, 67'
-        },
-        {
-            OrderID: 10251,
-            CustomerID: 'VICTE',
-            EmployeeID: 3,
-            ShipName: 'Victuailles en stock',
-            ShipCity: 'Lyon',
-            ShipAddress: '2, rue du Commerce'
-        },
-        {
-            OrderID: 10252,
-            CustomerID: 'SUPRD',
-            EmployeeID: 4,
-            ShipName: 'Suprêmes délices',
-            ShipCity: 'Charleroi',
-            ShipAddress: 'Boulevard Tirou, 255'
-        }]
+    columns: [],
+    data: []
 };
 
 export let questionSet1 = {
@@ -49,7 +9,7 @@ export let questionSet1 = {
     { type: 'CheckBox' },
     { type: 'CheckBox' },
     { type: 'CheckBox' },
-    { type: 'General' },
+    { type: 'General', width: 150 },
     { type: 'General' }
     ],
     data: [
@@ -59,8 +19,8 @@ export let questionSet1 = {
             'B': 'FALSE',
             'C': 'FALSE',
             'D': 'FALSE',
-            'Checkbox Count': '=COUNTIF(B2:E2,"TRUE")',
-            'Answer': 'A'
+            'Selected Option Count': '=COUNTIF(B2:E2,"TRUE")',
+            'Answer': '=IF(B2=TRUE,"A",IF(C2=TRUE,"B",IF(D2=TRUE,"C",IF(E2=TRUE,"D",IF(E2=TRUE,"E","")))))'
         },
         {
             'Question': 'Question 2',
@@ -68,8 +28,8 @@ export let questionSet1 = {
             'B': 'FALSE',
             'C': 'FALSE',
             'D': 'FALSE',
-            'Checkbox Count': '=COUNTIF(B3:E3,"TRUE")',
-            'Answer': 'C'
+            'Selected Option Count': '=COUNTIF(B3:E3,"TRUE")',
+            'Answer': '=IF(B3=TRUE,"A",IF(C3=TRUE,"B",IF(D3=TRUE,"C",IF(E3=TRUE,"D",IF(E3=TRUE,"E","")))))'
         },
         {
             'Question': 'Question 3',
@@ -77,8 +37,8 @@ export let questionSet1 = {
             'B': 'FALSE',
             'C': 'FALSE',
             'D': 'FALSE',
-            'Checkbox Count': '=COUNTIF(B4:E4,"TRUE")',
-            'Answer': 'D'
+            'Selected Option Count': '=COUNTIF(B4:E4,"TRUE")',
+            'Answer': '=IF(B4=TRUE,"A",IF(C4=TRUE,"B",IF(D4=TRUE,"C",IF(E4=TRUE,"D",IF(E4=TRUE,"E","")))))'
         },
         {
             'Question': 'Question 4',
@@ -86,8 +46,8 @@ export let questionSet1 = {
             'B': 'FALSE',
             'C': 'FALSE',
             'D': 'FALSE',
-            'Checkbox Count': '=COUNTIF(B5:E5,"TRUE")',
-            'Answer': 'B'
+            'Selected Option Count': '=COUNTIF(B5:E5,"TRUE")',
+            'Answer': '=IF(B5=TRUE,"A",IF(C5=TRUE,"B",IF(D5=TRUE,"C",IF(E5=TRUE,"D",IF(E5=TRUE,"E","")))))'
         },
         {
             'Question': 'Question 5',
@@ -95,8 +55,8 @@ export let questionSet1 = {
             'B': 'FALSE',
             'C': 'FALSE',
             'D': 'FALSE',
-            'Checkbox Count': '=COUNTIF(B6:E6,"TRUE")',
-            'Answer': 'A'
+            'Selected Option Count': '=COUNTIF(B6:E6,"TRUE")',
+            'Answer': '=IF(B6=TRUE,"A",IF(C6=TRUE,"B",IF(D6=TRUE,"C",IF(E6=TRUE,"D",IF(E6=TRUE,"E","")))))'
         },
         {
             'Question': 'Question 6',
@@ -104,8 +64,8 @@ export let questionSet1 = {
             'B': 'FALSE',
             'C': 'FALSE',
             'D': 'FALSE',
-            'Checkbox Count': '=COUNTIF(B7:E7,"TRUE")',
-            'Answer': 'D'
+            'Selected Option Count': '=COUNTIF(B7:E7,"TRUE")',
+            'Answer': '=IF(B7=TRUE,"A",IF(C7=TRUE,"B",IF(D7=TRUE,"C",IF(E7=TRUE,"D",IF(E7=TRUE,"E","")))))'
         },
         {
             'Question': 'Question 7',
@@ -113,8 +73,8 @@ export let questionSet1 = {
             'B': 'FALSE',
             'C': 'FALSE',
             'D': 'FALSE',
-            'Checkbox Count': '=COUNTIF(B8:E8,"TRUE")',
-            'Answer': 'C'
+            'Selected Option Count': '=COUNTIF(B8:E8,"TRUE")',
+            'Answer': '=IF(B8=TRUE,"A",IF(C8=TRUE,"B",IF(D8=TRUE,"C",IF(E8=TRUE,"D",IF(E8=TRUE,"E","")))))'
         },
         {
             'Question': 'Question 8',
@@ -122,8 +82,8 @@ export let questionSet1 = {
             'B': 'FALSE',
             'C': 'FALSE',
             'D': 'FALSE',
-            'Checkbox Count': '=COUNTIF(B9:E9,"TRUE")',
-            'Answer': 'B'
+            'Selected Option Count': '=COUNTIF(B9:E9,"TRUE")',
+            'Answer': '=IF(B9=TRUE,"A",IF(C9=TRUE,"B",IF(D9=TRUE,"C",IF(E9=TRUE,"D",IF(E9=TRUE,"E","")))))'
         },
         {
             'Question': 'Question 9',
@@ -131,8 +91,8 @@ export let questionSet1 = {
             'B': 'FALSE',
             'C': 'FALSE',
             'D': 'FALSE',
-            'Checkbox Count': '=COUNTIF(B10:E10,"TRUE")',
-            'Answer': 'A'
+            'Selected Option Count': '=COUNTIF(B10:E10,"TRUE")',
+            'Answer': '=IF(B10=TRUE,"A",IF(C10=TRUE,"B",IF(D10=TRUE,"C",IF(E10=TRUE,"D",IF(E10=TRUE,"E","")))))'
         },
         {
             'Question': 'Question 10',
@@ -140,8 +100,8 @@ export let questionSet1 = {
             'B': 'FALSE',
             'C': 'FALSE',
             'D': 'FALSE',
-            'Checkbox Count': '=COUNTIF(B11:E11,"TRUE")',
-            'Answer': 'D'
+            'Selected Option Count': '=COUNTIF(B11:E11,"TRUE")',
+            'Answer': '=IF(B11=TRUE,"A",IF(C11=TRUE,"B",IF(D11=TRUE,"C",IF(E11=TRUE,"D",IF(E11=TRUE,"E","")))))'
         }
     ]
 };
@@ -151,62 +111,72 @@ export let questionSet2 = {
         {
             'S.no': 1,
             'Question': 'What is the shortcut key to insert a new worksheet in Excel?\n(a) Ctrl + V\n(b) Shift + F11\n(c) Ctrl + N\n(d) Ctrl + X',
-            'Answer': 'B',
-            'Remark': 'TRUE'
+            'Answer': 'A',
+            'correctAnswer': 'B',
+            'Remark': ''
         },
         {
             'S.no': 2,
             'Question': 'What is the function to sum a range of cells in Excel?\n(a) ADD\n(b) SUMA\n(c) SUMS\n(d) SUM',
             'Answer': 'D',
-            'Remark': 'FALSE'
+            'correctAnswer': 'D',
+            'Remark': ''
         },
         {
             'S.no': 3,
             'Question': 'Which of the following is NOT a type of PivotTable?\n(a) Standard PivotTable\n(b) Pivot Chart\n(c) Timeline PivotTable\n(d) Slicer PivotTable',
-            'Answer': 'A',
-            'Remark': 'TRUE'
+            'Answer': 'C',
+            'correctAnswer': 'A',
+            'Remark': ''
         },
         {
             'S.no': 4,
             'Question': 'Which of the following is NOT a way to filter data in Excel?\n(a) AutoFilter\n(b) Advanced Filter\n(c) Slicer\n(d) Data Validation',
             'Answer': 'D',
-            'Remark': 'TRUE'
+            'correctAnswer': 'D',
+            'Remark': ''
         },
         {
             'S.no': 5,
             'Question': 'Which of the following is NOT a type of data connection in Excel?\n(a) OLE DB Connection\n(b) ODBC Connection\n(c) HTTPS Connection\n(d) Text File Connection',
-            'Answer': 'C',
-            'Remark': 'FALSE'
+            'Answer': 'B',
+            'correctAnswer': 'C',
+            'Remark': ''
         },
         {
             'S.no': 6,
             'Question': 'Which function returns the average of a range?\n(a) AVERAGE\n(b) SUM\n(c) MEDIAN\n(d) COUNT',
             'Answer': 'A',
-            'Remark': 'TRUE'
+            'correctAnswer': 'A',
+            'Remark': ''
         },
         {
             'S.no': 7,
             'Question': 'Which function returns the highest value in a range?\n(a) MIN\n(b) AVG\n(c) MAX\n(d) COUNT',
-            'Answer': 'C',
-            'Remark': 'TRUE'
+            'Answer': 'D',
+            'correctAnswer': 'C',
+            'Remark': ''
         },
         {
             'S.no': 8,
             'Question': 'Which function returns the lowest value in a range?\n(a) MAX\n(b) MIN\n(c) COUNT\n(d) SUM',
             'Answer': 'B',
-            'Remark': 'FALSE'
+            'correctAnswer': 'B',
+            'Remark': ''
         },
         {
             'S.no': 9,
             'Question': 'Which Excel feature is used to summarize and analyze large amounts of data?\n(a) Conditional Formatting\n(b) Data Validation\n(c) Flash Fill\n(d) PivotTable',
-            'Answer': 'D',
-            'Remark': 'TRUE'
+            'Answer': 'A',
+            'correctAnswer': 'D',
+            'Remark': ''
         },
         {
             'S.no': 10,
             'Question': 'Which chart type is best suited to show trends over time?\n(a) Line Chart\n(b) Pie Chart\n(c) Doughnut Chart\n(d) Radar Chart',
             'Answer': 'A',
-            'Remark': 'TRUE'
+            'correctAnswer': 'A',
+            'Remark': ''
         }
     ]
 };

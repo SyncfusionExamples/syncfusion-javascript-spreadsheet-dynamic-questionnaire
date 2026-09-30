@@ -4,14 +4,16 @@
 /* Dropdown */
 #changeDataDropdown {
     min-width: 180px;
-    /* padding: 8px; */
     font-size: 14px;
-    border: 1px solid #d1d5db;
     border-radius: 3px;
-    background-color: #d2e4fb;
+    background-color: #dce4f1;
     color: #333;
     cursor: pointer;
     outline: none;
-    transition: all 0.2s ease;
     margin: 16px 0;
+}
+
+.wrapper{
+    min-height: 550px;
+    height: calc(100vh - 130px);
 }

@@ -1,12 +1,19 @@
 import { Spreadsheet, DataSourceChangedEventArgs, getCellAddress, setCell, setColumn } from '@syncfusion/ej2-spreadsheet';
 import { data, questionSet1, questionSet2, questionSet3 } from './datasource.ts';
 import { CheckBox } from '@syncfusion/ej2-buttons';
+import { DropDownList } from '@syncfusion/ej2-dropdowns';
+
+// initialize DropDownList component
+   const dropDownListObject: DropDownList = new DropDownList({
+        placeholder:"Select an Interview details",
+        change: questionSetChangeHandler,
+        width: "250px"
+    });
+
+// render initialized DropDownList
+dropDownListObject.appendTo('#changeDataDropdown');    
 
 let spreadsheet: Spreadsheet = new Spreadsheet({
-    height: '550px',
-    sheets: [
-        {
-        }],
     beforeCellRender: (args) => {
         const column = currentData.columns?.[args.colIndex];
         if (
@@ -42,28 +49,40 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
 
 spreadsheet.appendTo('#spreadsheet');
 let currentData = data;
+let columnOrder: any;
 
-document.getElementById('changeDataDropdown').addEventListener('change', (e) => {
-    const selectedValue = e.target.value;
+function questionSetChangeHandler(args: any){
+    const selectedValue = args.value;
     spreadsheet.refresh(true);
 
     switch (selectedValue) {
         case 'questionSet1':
             currentData = questionSet1;
+            columnOrder = ['Question', 'A', 'B', 'C', 'D', 'Selected Option Count', 'Answer'];
             break;
         case 'questionSet2':
             currentData = questionSet2;
+            columnOrder = ['S.no', 'Question', 'Answer', 'Remark'];
             break;
         case 'questionSet3':
             currentData = questionSet3;
+            columnOrder = ['Data', 'Question', 'Functions to learn', 'Formula Used'];
             break;
         case 'default':
             currentData = data;
             break;
     }
-    spreadsheet.updateRange({ startCell: 'A1', fieldsOrder:[], dataSource: currentData.data }, 0);
+    spreadsheet.updateRange({ startCell: 'A1', fieldsOrder: columnOrder, dataSource: currentData.data }, 0);
+    if (currentData === questionSet2) {
+        currentData.data.forEach((item: any, index: number) => {
+            currentData.data.forEach((item: any, index: number) => {
+                setCell(index + 1, 3, spreadsheet.getActiveSheet(), {
+                    formula: `=IF(C${index + 2}="${item.correctAnswer}",TRUE,FALSE)`
+                });
+            });
+        });
+    }
     setTimeout(() => {
         spreadsheet.resize();
     });
-
-});
+};

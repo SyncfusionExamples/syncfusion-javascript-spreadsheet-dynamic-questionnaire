@@ -5,7 +5,7 @@
     <title>Syncfusion TypeScript Spreadsheet</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <meta name="description" content="Syncfusion TypeScript Spreadsheet" />
+    <meta name="description" content="Syncfusion Spreadsheet Dynamic Questionnaire" />
     <meta name="author" content="Syncfusion" />
     <link rel="shortcut icon" href="resources/favicon.ico" />
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
@@ -16,11 +16,13 @@
     <div>
         <div>
             <select id="changeDataDropdown" class="btn">
-                <option value="default">Default Data</option>
-                <option value="questionSet1">Question Set 1</option>
-                <option value="questionSet2">Question Set 2</option>
-                <option value="questionSet3">Question Set 3</option>
+                <option value="default">Load Default</option>
+                <option value="questionSet1">Load Question Set 1</option>
+                <option value="questionSet2">Load Question Set 2</option>
+                <option value="questionSet3">Load Question Set 3</option>
             </select>
+        </div>
+        <div class="wrapper">
             <div id="spreadsheet"></div>
         </div>
     </div>

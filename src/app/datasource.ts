@@ -20,7 +20,7 @@ export let questionSet1 = {
             'C': 'FALSE',
             'D': 'FALSE',
             'Checkbox Count': '=COUNTIF(B2:E2,"TRUE")',
-            'Answer': 'A'
+            'Answer': '=IF(B2=TRUE,"A",IF(C2=TRUE,"B",IF(D2=TRUE,"C",IF(E2=TRUE,"D",IF(E2=TRUE,"E","")))))'
         },
         {
             'Question': 'Question 2',
@@ -29,7 +29,7 @@ export let questionSet1 = {
             'C': 'FALSE',
             'D': 'FALSE',
             'Checkbox Count': '=COUNTIF(B3:E3,"TRUE")',
-            'Answer': 'C'
+            'Answer': '=IF(B3=TRUE,"A",IF(C3=TRUE,"B",IF(D3=TRUE,"C",IF(E3=TRUE,"D",IF(E3=TRUE,"E","")))))'
         },
         {
             'Question': 'Question 3',
@@ -38,7 +38,7 @@ export let questionSet1 = {
             'C': 'FALSE',
             'D': 'FALSE',
             'Checkbox Count': '=COUNTIF(B4:E4,"TRUE")',
-            'Answer': 'D'
+            'Answer': '=IF(B4=TRUE,"A",IF(C4=TRUE,"B",IF(D4=TRUE,"C",IF(E4=TRUE,"D",IF(E4=TRUE,"E","")))))'
         },
         {
             'Question': 'Question 4',
@@ -47,7 +47,7 @@ export let questionSet1 = {
             'C': 'FALSE',
             'D': 'FALSE',
             'Checkbox Count': '=COUNTIF(B5:E5,"TRUE")',
-            'Answer': 'B'
+            'Answer': '=IF(B5=TRUE,"A",IF(C5=TRUE,"B",IF(D5=TRUE,"C",IF(E5=TRUE,"D",IF(E5=TRUE,"E","")))))'
         },
         {
             'Question': 'Question 5',
@@ -56,7 +56,7 @@ export let questionSet1 = {
             'C': 'FALSE',
             'D': 'FALSE',
             'Checkbox Count': '=COUNTIF(B6:E6,"TRUE")',
-            'Answer': 'A'
+            'Answer': '=IF(B6=TRUE,"A",IF(C6=TRUE,"B",IF(D6=TRUE,"C",IF(E6=TRUE,"D",IF(E6=TRUE,"E","")))))'
         },
         {
             'Question': 'Question 6',
@@ -65,7 +65,7 @@ export let questionSet1 = {
             'C': 'FALSE',
             'D': 'FALSE',
             'Checkbox Count': '=COUNTIF(B7:E7,"TRUE")',
-            'Answer': 'D'
+            'Answer': '=IF(B7=TRUE,"A",IF(C7=TRUE,"B",IF(D7=TRUE,"C",IF(E7=TRUE,"D",IF(E7=TRUE,"E","")))))'
         },
         {
             'Question': 'Question 7',
@@ -74,7 +74,7 @@ export let questionSet1 = {
             'C': 'FALSE',
             'D': 'FALSE',
             'Checkbox Count': '=COUNTIF(B8:E8,"TRUE")',
-            'Answer': 'C'
+            'Answer': '=IF(B8=TRUE,"A",IF(C8=TRUE,"B",IF(D8=TRUE,"C",IF(E8=TRUE,"D",IF(E8=TRUE,"E","")))))'
         },
         {
             'Question': 'Question 8',
@@ -83,7 +83,7 @@ export let questionSet1 = {
             'C': 'FALSE',
             'D': 'FALSE',
             'Checkbox Count': '=COUNTIF(B9:E9,"TRUE")',
-            'Answer': 'B'
+            'Answer': '=IF(B9=TRUE,"A",IF(C9=TRUE,"B",IF(D9=TRUE,"C",IF(E9=TRUE,"D",IF(E9=TRUE,"E","")))))'
         },
         {
             'Question': 'Question 9',
@@ -92,7 +92,7 @@ export let questionSet1 = {
             'C': 'FALSE',
             'D': 'FALSE',
             'Checkbox Count': '=COUNTIF(B10:E10,"TRUE")',
-            'Answer': 'A'
+            'Answer': '=IF(B10=TRUE,"A",IF(C10=TRUE,"B",IF(D10=TRUE,"C",IF(E10=TRUE,"D",IF(E10=TRUE,"E","")))))'
         },
         {
             'Question': 'Question 10',
@@ -101,7 +101,7 @@ export let questionSet1 = {
             'C': 'FALSE',
             'D': 'FALSE',
             'Checkbox Count': '=COUNTIF(B11:E11,"TRUE")',
-            'Answer': 'D'
+            'Answer': '=IF(B11=TRUE,"A",IF(C11=TRUE,"B",IF(D11=TRUE,"C",IF(E11=TRUE,"D",IF(E11=TRUE,"E","")))))'
         }
     ]
 };

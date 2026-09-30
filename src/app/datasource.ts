@@ -113,145 +113,145 @@ export let questionSet2 = {
             'Question': 'What is the shortcut key to insert a new worksheet in Excel?\n(a) Ctrl + V\n(b) Shift + F11\n(c) Ctrl + N\n(d) Ctrl + X',
             'Answer': 'A',
             'correctAnswer': 'B',
-            'Remark': ''
+            'Remark': '=IF(C2="A",TRUE,FALSE)'
         },
         {
             'S.no': 2,
             'Question': 'What is the function to sum a range of cells in Excel?\n(a) ADD\n(b) SUMA\n(c) SUMS\n(d) SUM',
             'Answer': 'D',
             'correctAnswer': 'D',
-            'Remark': ''
+            'Remark': '=IF(C3="D",TRUE,FALSE)'
         },
         {
             'S.no': 3,
             'Question': 'Which of the following is NOT a type of PivotTable?\n(a) Standard PivotTable\n(b) Pivot Chart\n(c) Timeline PivotTable\n(d) Slicer PivotTable',
             'Answer': 'C',
             'correctAnswer': 'A',
-            'Remark': ''
+            'Remark': '=IF(C4="A",TRUE,FALSE)'
         },
         {
             'S.no': 4,
             'Question': 'Which of the following is NOT a way to filter data in Excel?\n(a) AutoFilter\n(b) Advanced Filter\n(c) Slicer\n(d) Data Validation',
             'Answer': 'D',
             'correctAnswer': 'D',
-            'Remark': ''
+            'Remark': '=IF(C5="D",TRUE,FALSE)'
         },
         {
             'S.no': 5,
             'Question': 'Which of the following is NOT a type of data connection in Excel?\n(a) OLE DB Connection\n(b) ODBC Connection\n(c) HTTPS Connection\n(d) Text File Connection',
             'Answer': 'B',
             'correctAnswer': 'C',
-            'Remark': ''
+            'Remark': '=IF(C6="C",TRUE,FALSE)'
         },
         {
             'S.no': 6,
             'Question': 'Which function returns the average of a range?\n(a) AVERAGE\n(b) SUM\n(c) MEDIAN\n(d) COUNT',
             'Answer': 'A',
             'correctAnswer': 'A',
-            'Remark': ''
+            'Remark': '=IF(C7="A",TRUE,FALSE)'
         },
         {
             'S.no': 7,
             'Question': 'Which function returns the highest value in a range?\n(a) MIN\n(b) AVG\n(c) MAX\n(d) COUNT',
             'Answer': 'D',
             'correctAnswer': 'C',
-            'Remark': ''
+            'Remark': '=IF(C8="C",TRUE,FALSE)'
         },
         {
             'S.no': 8,
             'Question': 'Which function returns the lowest value in a range?\n(a) MAX\n(b) MIN\n(c) COUNT\n(d) SUM',
             'Answer': 'B',
             'correctAnswer': 'B',
-            'Remark': ''
+            'Remark': '=IF(C9="B",TRUE,FALSE)'
         },
         {
             'S.no': 9,
             'Question': 'Which Excel feature is used to summarize and analyze large amounts of data?\n(a) Conditional Formatting\n(b) Data Validation\n(c) Flash Fill\n(d) PivotTable',
             'Answer': 'A',
             'correctAnswer': 'D',
-            'Remark': ''
+            'Remark': '=IF(C10="D",TRUE,FALSE)'
         },
         {
             'S.no': 10,
             'Question': 'Which chart type is best suited to show trends over time?\n(a) Line Chart\n(b) Pie Chart\n(c) Doughnut Chart\n(d) Radar Chart',
             'Answer': 'A',
             'correctAnswer': 'A',
-            'Remark': ''
+            'Remark': '=IF(C11="A",TRUE,FALSE)'
         }
     ]
 };
 export let questionSet3 = {
-    columns: [{ type: 'General' }, { type: 'General', width: 360 }, { type: 'General', width: 200 }, { type: 'General' }, { type: 'General', width: 100 }],
+    columns: [{ type: 'General' }, { type: 'General', width: 360 }, { type: 'General', width: 200 }, { type: 'General' }, { type: 'General', width: 250 }],
     data: [
         {
             'Data': 78,
             'Question': 'How many data observations are present (sample size)?',
             'Functions to learn': 'COUNT',
             'Answer': '',
-            'Formula Used': '#N/A'
+            'Formula Description': 'Counts the number of numeric values in the selected data range.'
         },
         {
             'Data': 69,
             'Question': 'What is the sum of the data?',
             'Functions to learn': 'SUM',
             'Answer': '',
-            'Formula Used': '#N/A'
+            'Formula Description': 'Adds all numeric values in the selected data range.'
         },
         {
             'Data': 65,
             'Question': 'What is the mean (average) of the data?',
             'Functions to learn': 'AVERAGE',
             'Answer': '',
-            'Formula Used': '#N/A'
+            'Formula Description': 'Calculates the arithmetic mean of the values in the selected range.'
         },
         {
             'Data': 99,
             'Question': 'What is the median of the data?',
             'Functions to learn': 'MEDIAN',
             'Answer': '',
-            'Formula Used': '#N/A'
+            'Formula Description': 'Returns the middle value when the data is arranged in ascending order.'
         },
         {
             'Data': 72,
             'Question': 'What is the minimum value of the data?',
             'Functions to learn': 'MIN',
             'Answer': '',
-            'Formula Used': '#N/A'
+            'Formula Description': 'Returns the smallest value from the selected data range.'
         },
         {
             'Data': 53,
             'Question': 'What is the maximum value of the data?',
             'Functions to learn': 'MAX',
             'Answer': '',
-            'Formula Used': '#N/A'
+            'Formula Description': 'Returns the largest value from the selected data range.'
         },
         {
             'Data': 92,
             'Question': 'What is the square root of the sample size?',
             'Functions to learn': 'SQRT',
             'Answer': '',
-            'Formula Used': '#N/A'
+            'Formula Description': 'Returns the positive square root of a given number.'
         },
         {
             'Data': 50,
             'Question': 'What is the value of the third observation when squared?',
             'Functions to learn': 'POWER',
             'Answer': '',
-            'Formula Used': '#N/A'
+            'Formula Description': 'Raises a number to the specified power or exponent.'
         },
         {
             'Data': 54,
             'Question': 'What is the sample variance?',
             'Functions to learn': 'VAR.S',
             'Answer': '',
-            'Formula Used': '#N/A'
+            'Formula Description': 'Calculates the variance of a sample data set, measuring data dispersion from the mean.'
         },
         {
             'Data': 100,
             'Question': 'What is the sample standard deviation?',
             'Functions to learn': 'STDEV.S',
             'Answer': '',
-            'Formula Used': '#N/A'
+            'Formula Description': 'Calculates the standard deviation of a sample data set, indicating how spread out the values are.'
         }
     ]
 };

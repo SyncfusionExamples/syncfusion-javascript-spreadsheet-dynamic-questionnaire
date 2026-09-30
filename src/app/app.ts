@@ -48,7 +48,7 @@ document.getElementById('changeDataDropdown').addEventListener('change', (e) => 
     switch (selectedValue) {
         case 'questionSet1':
             currentData = questionSet1;
-            columnOrder = ['Question', 'A', 'B', 'C', 'D', 'Checbox Count', 'Answer'];
+            columnOrder = ['Question', 'A', 'B', 'C', 'D', 'Selected Option Count', 'Answer'];
             break;
         case 'questionSet2':
             currentData = questionSet2;

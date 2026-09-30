@@ -3,7 +3,6 @@ import { data, questionSet1, questionSet2, questionSet3 } from './datasource.ts'
 import { CheckBox } from '@syncfusion/ej2-buttons';
 
 let spreadsheet: Spreadsheet = new Spreadsheet({
-    height: '550px',
     beforeCellRender: (args) => {
         const column = currentData.columns?.[args.colIndex];
         if (

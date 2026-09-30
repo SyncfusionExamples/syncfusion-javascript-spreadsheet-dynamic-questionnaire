@@ -12,3 +12,8 @@
     outline: none;
     margin: 16px 0;
 }
+
+.wrapper{
+    min-height: 550px;
+    height: calc(100vh - 130px);
+}
